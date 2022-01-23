@@ -19,6 +19,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
@@ -40,6 +44,8 @@ fun SearchAppBar(
     onCloseClicked: () -> Unit,
     onSearchClicked: (String) -> Unit,
 ) {
+    var trailIconVisibility by remember { mutableStateOf(false) }
+
     Surface(
         modifier = Modifier
             .fillMaxWidth()
@@ -56,6 +62,7 @@ fun SearchAppBar(
             value = text,
             onValueChange = {
                 onTextChange(it)
+                trailIconVisibility = it.isNotBlank()
             },
             placeholder = {
                 Text(
@@ -81,21 +88,23 @@ fun SearchAppBar(
                 }
             },
             trailingIcon = {
-                IconButton(
-                    modifier = Modifier.testTag(EDIT_TEXT_CROSS_BTN),
-                    onClick = {
-                        if (text.isNotEmpty()) {
-                            onTextChange("")
-                        } else {
-                            onCloseClicked()
+                if (trailIconVisibility)
+                    IconButton(
+                        modifier = Modifier.testTag(EDIT_TEXT_CROSS_BTN),
+                        onClick = {
+                            if (text.isNotEmpty()) {
+                                onTextChange("")
+                                trailIconVisibility = false
+                            } else {
+                                onCloseClicked()
+                            }
                         }
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Close,
+                            contentDescription = "Close Icon",
+                        )
                     }
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Close,
-                        contentDescription = "Close Icon",
-                    )
-                }
             },
             keyboardOptions = KeyboardOptions(
                 imeAction = ImeAction.Search
