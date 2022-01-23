@@ -33,7 +33,7 @@ object AndroidApp {
     const val versionCode = 1
     const val versionName = "1.0"
 
-    const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    const val testInstrumentationRunner = "com.techlad.onevalet.HiltTestRunner"
 }
 
 object Libs {
@@ -114,11 +114,9 @@ object Libs {
         const val android = "com.google.dagger:hilt-android:$version"
         const val compiler = "com.google.dagger:hilt-compiler:$version"
         const val testing = "com.google.dagger:hilt-android-testing:$version"
+        const val testing_compiler = "com.google.dagger:hilt-android-compiler:$version"
 
         const val navigation = "androidx.hilt:hilt-navigation-compose:1.0.0-rc01"
-//        const val compiler = "androidx.hilt:hilt-compiler:1.0.0"
-//        const val dagger = "com.google.dagger:hilt-android:2.38.1"
-//        const val android_compiler = "com.google.dagger:hilt-android-compiler:2.38.1"
     }
 
     object JUnit {
@@ -126,8 +124,8 @@ object Libs {
         const val junit = "junit:junit:$version"
     }
 
-    object Coil {
-        const val coilCompose = "io.coil-kt:coil-compose:1.3.0"
+    object Test {
+        const val truth = "com.google.truth:truth:1.1"
     }
 }
 

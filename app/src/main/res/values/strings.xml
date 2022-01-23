@@ -9,4 +9,6 @@
     <string name="about_one_valet">
         1VALET is a smart building operating system that combines hardware, software, and services to make residential buildings better places to live and work.
     </string>
+    <string name="see_more">See more</string>
+    <string name="see_less">See Less</string>
 </resources>

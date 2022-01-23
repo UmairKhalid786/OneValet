@@ -9,12 +9,15 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.techlad.onevalet.ui.navigation.AppNavigation
+import com.techlad.onevalet.presentation.navigation.AppNavigation
 import com.techlad.onevalet.ui.theme.OneValetTheme
+import dagger.hilt.android.AndroidEntryPoint
 
 @ExperimentalMaterialApi
-class MainActivity: ComponentActivity() {
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +27,18 @@ class MainActivity: ComponentActivity() {
 
         setContent {
             val navController = rememberNavController()
-            OneValetTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    AppNavigation(navController)
-                }
-            }
+            ThemeHandler(navController = navController)
+        }
+    }
+}
+
+@ExperimentalMaterialApi
+@Composable
+fun ThemeHandler(navController: NavHostController) {
+    OneValetTheme() {
+        // A surface container using the 'background' color from the theme
+        Surface(color = MaterialTheme.colors.background) {
+            AppNavigation(navController)
         }
     }
 }
