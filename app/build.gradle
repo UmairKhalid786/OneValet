@@ -59,12 +59,15 @@ dependencies {
     implementation Libs.AndroidX.core_ktx
     implementation Libs.AndroidX.appcompat
     implementation Libs.AndroidX.material
+    implementation Libs.AndroidX.splash
+    implementation Libs.AndroidX.navigation
+
     implementation Libs.AndroidX.Compose.ui
     implementation Libs.AndroidX.Compose.material
     implementation Libs.AndroidX.Compose.preview
+
     implementation Libs.AndroidX.Lifecycle.runtime
     implementation Libs.AndroidX.Activity.activityCompose
-    implementation Libs.AndroidX.navigation
 
     implementation Libs.Accompanist.insets
 

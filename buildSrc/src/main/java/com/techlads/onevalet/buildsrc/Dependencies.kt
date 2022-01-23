@@ -65,6 +65,7 @@ object Libs {
         const val appcompat = "androidx.appcompat:appcompat:1.4.1"
         const val material = "com.google.android.material:material:1.4.0"
         const val core_ktx = "androidx.core:core-ktx:1.7.0"
+        const val splash = "androidx.core:core-splashscreen:1.0.0-beta01"
 
         const val navigation = "androidx.navigation:navigation-compose:2.4.0-rc01"
 

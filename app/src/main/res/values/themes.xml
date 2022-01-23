@@ -11,11 +11,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
-        <item name="android:windowBackground" tools:targetApi="l">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
-    </style>
-
-    <style name="Theme.OneValet.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

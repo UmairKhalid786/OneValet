@@ -3,7 +3,6 @@ package com.techlad.onevalet.presentation.navigation
 import com.techlad.onevalet.presentation.navigation.DetailsParam.Companion.DEVICE_ID
 
 sealed class Screens(val title: String) {
-    object Splash : Screens("splash_screen")
     object Home : Screens("home_screen")
     object Devices : Screens("devices_screen")
     object Settings : Screens("settings_screen")

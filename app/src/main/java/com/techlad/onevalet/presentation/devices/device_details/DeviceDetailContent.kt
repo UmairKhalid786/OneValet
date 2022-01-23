@@ -44,8 +44,6 @@ fun DeviceDetailContent(
         MovieDetailHeader(device)
 
         MovieDetailSummary(device)
-
-        Spacer(modifier = Modifier.height(24.dp))
     }
 }
 
@@ -101,7 +99,7 @@ private fun MovieDetailHeader(device: Device) {
 
 @Composable
 private fun MovieDetailSummary(device: Device) {
-    Column {
+    Column(modifier = Modifier.padding(16.dp)) {
 
         Text(
             text = device.description,
@@ -111,7 +109,7 @@ private fun MovieDetailSummary(device: Device) {
             fontWeight = FontWeight.Bold,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 15.dp)
+                .padding(horizontal = 16.dp)
         )
 
         Spacer(modifier = Modifier.height(12.dp))
