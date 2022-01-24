@@ -33,4 +33,7 @@ Written using Kotlin
 ## Important Note
 - New Splash Screen 12 API is added 
 - Jetpack compose navigation added
+
+## Night Mode Support
+- Yes 
  
