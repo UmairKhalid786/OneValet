@@ -1,8 +1,8 @@
 # OneValet
-This project is meant for One Valet challenge
+This project is meant for the One Valet challenge
 
 ## Features
-Project have 5 different screens
+The project have 5 different screens
 - Splash
 - Home
 - Devices
@@ -12,11 +12,11 @@ Project have 5 different screens
 ## Architecture
 Built with MVVM using clean code.
 
-## Usecases
-Devices usecase
+## Use cases
+Devices use case
 - Fetching all devices
 - Fetching device by ID
-- Search devices
+- Search Devices
 
 ## UI 
 Built with [Jetpack Compose.](https://developer.android.com/jetpack/compose)
@@ -26,9 +26,9 @@ Written using Kotlin
 
 ## Testing
 - #### Unit Testing
-  - Only devices usecases are unit tested
+  - Only device usecases are unit tested
 - #### UI Testing
-  - Only devices screen is UI tested
+  - Only the devices screen is UI tested
 
 ## Important Note
 - New Splash Screen 12 API is added 
@@ -36,4 +36,3 @@ Written using Kotlin
 
 ## Night Mode Support
 - Yes 
- 
