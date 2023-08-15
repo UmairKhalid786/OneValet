@@ -26,7 +26,7 @@ Written using Kotlin
 
 ## Testing
 - #### Unit Testing
-  - Only device usecases are unit tested
+  - Only device use cases are unit tested
 - #### UI Testing
   - Only the devices screen is UI tested
 
