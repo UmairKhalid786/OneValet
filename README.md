@@ -26,9 +26,9 @@ Written using Kotlin
 
 ## Testing
 - #### Unit Testing
-  - Only device use cases are unit tested
+  - Only device use cases are unit-tested
 - #### UI Testing
-  - Only the devices screen is UI tested
+  - Only the device screen is UI-tested
 
 ## Important Note
 - New Splash Screen 12 API is added 
